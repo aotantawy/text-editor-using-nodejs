@@ -56,7 +56,7 @@ app.route("/view-files")
     });
 
 
-app.post("/file", (req, res) => {
+app.post("/view-file", (req, res) => {
     // get a certain file in database 
     File.findById(req.body.fileID, (err, file) => {
         if (err) {
@@ -75,6 +75,16 @@ app.post("/update-file", (req, res) => {
             res.send("error");
         } else {
             res.redirect("/view-files");
+        }
+    });
+});
+
+app.post("/delete-file", (req, res) => {
+    File.deleteOne({ _id: req.body.fileID }, (err) => {
+        if (err) {
+            res.render("error");
+        } else {
+            res.redirect("view-files");
         }
     });
 });

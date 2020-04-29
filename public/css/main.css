@@ -17,6 +17,11 @@ textarea {
   font-family: "PT Mono", monospace;
 }
 
+.view-full-file,
+.delete-file {
+  display: inline-block;
+}
+
 .text-edit-container {
   position: relative;
 }
@@ -83,12 +88,15 @@ textarea {
   margin: 20px 50px;
 }
 
-
-.error-header ,
+.error-header,
 .error-description {
   text-align: center;
   font-weight: bold;
   font-family: "PT Mono", monospace;
   width: 25%;
   margin: 25% auto;
+}
+
+.delete-btn {
+  margin-left: 10px;
 }
