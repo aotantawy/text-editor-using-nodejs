@@ -1,0 +1,94 @@
+body {
+  background-color: #f4f4f4;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  border: 0;
+  border-radius: 0.3rem;
+  margin: 10px 30px;
+  width: 95%;
+  height: 100vh;
+  resize: none;
+  outline: none;
+  padding: 10px;
+  font-family: "PT Mono", monospace;
+}
+
+.text-edit-container {
+  position: relative;
+}
+
+.save-file,
+.view-file,
+.file-name,
+.update-file {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.save-file,
+.make-file,
+.update-file {
+  font-weight: 100;
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  z-index: 2;
+  width: 150px;
+  text-align: center;
+}
+
+.make-file {
+  top: 20px;
+}
+
+.view-file {
+  font-weight: 100;
+  position: absolute;
+  top: 135px;
+  right: 40px;
+  z-index: 2;
+  width: 150px;
+  text-align: center;
+}
+
+.file-name {
+  outline: none;
+  width: 150px;
+  position: absolute;
+  right: 40px;
+  top: 10px;
+  z-index: 2;
+  height: 45px;
+  text-align: center;
+}
+
+.file-name:focus {
+  border-color: #c1c1c1;
+  -webkit-box-shadow: none;
+}
+
+.text-counter {
+  border: 0;
+  outline: none;
+  position: absolute;
+  bottom: 50px;
+  right: 70px;
+  width: 60px;
+}
+
+.file-entity {
+  margin: 20px 50px;
+}
+
+
+.error-header ,
+.error-description {
+  text-align: center;
+  font-weight: bold;
+  font-family: "PT Mono", monospace;
+  width: 25%;
+  margin: 25% auto;
+}

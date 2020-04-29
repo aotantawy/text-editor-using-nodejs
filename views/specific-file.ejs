@@ -1,0 +1,26 @@
+<%- include("partials/header") -%>
+
+<!--update the selected file -->
+<form action="/update-file" method="POST">
+    <div class="text-edit-container">
+        <textarea name="fileContent" name="fileContent" class="file-content"> <%= files.file %> </textarea>
+        <input type="text" class="text-counter" placeholder="0" readonly>
+    </div>
+
+    <input type="text" class="form-control file-name" placeholder="Enter File Name" name="fileName" autocomplete="off"
+        value="<%=files.fileName%>" required readonly>
+
+    <input type="hidden" name="fileID" value="<%=files._id%>">
+
+    <button type="submit" class="btn btn-lg btn-secondary update-file">Update!</button>
+
+</form>
+
+<!--view all saved and updated files -->
+<form action="/view-files" method="GET">
+
+    <button type="submit" class="btn btn-lg btn-secondary view-file">View files!</button>
+
+</form>
+
+<%- include("partials/footer") -%>

@@ -1,0 +1,25 @@
+<%- include("partials/header") -%>
+
+<!--get all the saved files -->
+<% for(let i = 0 ; i<files.length;i++) { %>
+
+<div class="card w-75 file-entity">
+    <div class="card-body">
+        <!--view all saved files in card view -->
+        <form action="/file" method="POST">
+            <h5 class="card-title"><%= files[i].fileName %></h5>
+            <p class="card-text"><%= files[i].file.substring(0,100) %></p>
+            <button class="btn btn-lg btn-secondary" type="submit" name="fileID" value="<%=files[i]._id%>">
+                View Full File
+            </button>
+        </form>
+    </div>
+</div>
+
+<% } %>
+<!--create brand new file -->
+<form action="/view-files" method="POST">
+    <button type="submit" class="btn btn-lg btn-secondary make-file">Create File</button>
+</form>
+
+<%- include("partials/footer") -%>

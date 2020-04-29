@@ -1,0 +1,19 @@
+<%- include("partials/header") -%>
+
+<!--text edit with save option-->
+<form action="/" method="POST">
+    <div class="textarea-container">
+        <textarea name="fileContent" class="file-content"></textarea>
+        <input type="text" class="text-counter" placeholder="0" readonly>
+    </div>
+    <input type="text" class="form-control file-name" placeholder="Enter File Name" 
+    name="fileName" autocomplete="off" required>
+    <button type="submit" class="btn btn-lg btn-secondary save-file">Save!</button>
+</form>
+
+<!--viewing all the saved files -->
+<form action="/view-files" method="GET">
+    <button type="submit" class="btn btn-lg btn-secondary view-file">View files!</button>
+</form>
+
+<%- include("partials/footer") -%>
